@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IMShared'/>
+  </variables>
+  <server>
+    <repository location='https://www.ibm.com/software/repositorymanager/V8WASDeveloperILAN'/>
+  </server>
+  <profile id='WebSphere Application Server V8.0' installLocation='/opt/IBM/WebSphere/AppServer'>
+    <data key='cic.selector.arch' value='x86'/>
+  </profile>
+  <install>
+    <!-- IBM WebSphere Application Server for Developers (ILAN) 8.0.0.15 -->
+    <offering profile='WebSphere Application Server V8.0' id='com.ibm.websphere.DEVELOPERSILAN.v80' version='8.0.15.20180326_2355' features='core.feature,ejbdeploy,thinclient,embeddablecontainer,com.ibm.sdk.6_64bit'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+</agent-input>
